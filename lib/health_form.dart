@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:r3lax_stable/home.dart';
 
 double ukuran_font = 14;
 IconData icon_health_form = Icons.add;
@@ -17,10 +18,16 @@ class Health_form extends StatelessWidget {
                 child: Stack(
                   children: <Widget>[
                     Positioned(
-                      child: Icon(Icons.arrow_back),
-                      top: 20,
-                      left: 20,
-                    )
+                        child: IconButton(
+                            icon: Icon(Icons.arrow_back),
+                            onPressed: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => Home()));
+                            }),
+                        top: MediaQuery.of(context).size.height / 100,
+                        left: MediaQuery.of(context).size.width / 100)
                   ],
                 ),
                 height: MediaQuery.of(context).size.height / 4,
