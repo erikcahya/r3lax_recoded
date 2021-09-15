@@ -5,6 +5,7 @@ class Login extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: SafeArea(
         child: Scaffold(
           body: Container(
@@ -38,18 +39,21 @@ class Login extends StatelessWidget {
                         color: Colors.white,
                         borderRadius: BorderRadius.only(
                             bottomRight: Radius.circular(50))),
-                  ),
-                ),
-                Align(
-                  alignment: Alignment.topLeft,
-                  child: Container(
-                    margin: EdgeInsets.only(left: 5),
-                    height: MediaQuery.of(context).size.height / 14,
-                    width: MediaQuery.of(context).size.width / 4.1,
-                    decoration: BoxDecoration(
-                        image: DecorationImage(
-                            image: AssetImage("assets/phi-logo.png"),
-                            fit: BoxFit.fitWidth)),
+                    child: Stack(
+                      children: [
+                        Positioned(
+                          child: Container(
+                            margin: EdgeInsets.only(left: 5),
+                            height: MediaQuery.of(context).size.height / 14,
+                            width: MediaQuery.of(context).size.width / 4.1,
+                            decoration: BoxDecoration(
+                                image: DecorationImage(
+                                    image: AssetImage("assets/phi-logo.png"),
+                                    fit: BoxFit.contain)),
+                          ),
+                        )
+                      ],
+                    ),
                   ),
                 ),
                 Align(
@@ -70,7 +74,9 @@ class Login extends StatelessWidget {
                                   "Welcome Back !",
                                   style: TextStyle(
                                       color: Colors.blue,
-                                      fontSize: 25,
+                                      fontSize:
+                                          MediaQuery.of(context).size.height /
+                                              25,
                                       fontWeight: FontWeight.bold),
                                 ),
                               ),

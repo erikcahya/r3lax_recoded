@@ -6,6 +6,7 @@ class Profile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: SafeArea(
         child: Scaffold(
           body: Stack(
@@ -46,10 +47,12 @@ class Profile extends StatelessWidget {
                             right: 67,
                             bottom: 130,
                             child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
                               children: <Widget>[
                                 Flexible(
                                     flex: 3,
                                     child: Container(
+                                      alignment: Alignment.center,
                                       height:
                                           MediaQuery.of(context).size.height /
                                               4,
@@ -66,6 +69,7 @@ class Profile extends StatelessWidget {
                                 Flexible(
                                     flex: 1,
                                     child: Container(
+                                      alignment: Alignment.topCenter,
                                       margin: EdgeInsets.only(top: 10),
                                       height:
                                           MediaQuery.of(context).size.height /
@@ -74,15 +78,18 @@ class Profile extends StatelessWidget {
                                       child: Text(
                                         "Erick Cahya Suhanda",
                                         style: TextStyle(
-                                            fontSize: 20,
+                                            fontSize: MediaQuery.of(context)
+                                                    .size
+                                                    .height /
+                                                45,
                                             color: Colors.green,
                                             fontWeight: FontWeight.bold),
-                                        textAlign: TextAlign.center,
                                       ),
                                     )),
                                 Flexible(
                                     flex: 1,
                                     child: Container(
+                                      alignment: Alignment.topCenter,
                                       margin: EdgeInsets.only(top: 5),
                                       height:
                                           MediaQuery.of(context).size.height /
@@ -91,15 +98,18 @@ class Profile extends StatelessWidget {
                                       child: Text(
                                         "ICT Programmer",
                                         style: TextStyle(
-                                          fontSize: 18,
+                                          fontSize: MediaQuery.of(context)
+                                                  .size
+                                                  .height /
+                                              50,
                                           color: Colors.green,
                                         ),
-                                        textAlign: TextAlign.center,
                                       ),
                                     )),
                                 Flexible(
                                     flex: 1,
                                     child: Container(
+                                      alignment: Alignment.topCenter,
                                       margin: EdgeInsets.only(top: 5),
                                       height:
                                           MediaQuery.of(context).size.height /
