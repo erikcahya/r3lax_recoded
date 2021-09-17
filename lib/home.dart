@@ -125,14 +125,27 @@ class Home extends StatelessWidget {
                                                             Health_form()));
                                               },
                                               child: Column(
+                                                crossAxisAlignment:
+                                                    CrossAxisAlignment.start,
                                                 children: <Widget>[
-                                                  Image.asset(
-                                                    "assets/ic-attendance-form.png",
+                                                  Container(
+                                                    alignment: Alignment.center,
                                                     height:
                                                         MediaQuery.of(context)
                                                                 .size
                                                                 .height /
                                                             12,
+                                                    width:
+                                                        MediaQuery.of(context)
+                                                                .size
+                                                                .width /
+                                                            6,
+                                                    decoration: BoxDecoration(
+                                                        image: DecorationImage(
+                                                            image: AssetImage(
+                                                                "assets/ic-attendance-form.png"),
+                                                            fit: BoxFit
+                                                                .contain)),
                                                   ),
                                                   Text(
                                                     "Attendance Form",
@@ -149,13 +162,24 @@ class Home extends StatelessWidget {
                                         child: InkWell(
                                           onTap: () {},
                                           child: Column(
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.start,
                                             children: <Widget>[
-                                              Image.asset(
-                                                "assets/ic-attendance-list.png",
+                                              Container(
+                                                alignment: Alignment.center,
                                                 height: MediaQuery.of(context)
                                                         .size
                                                         .height /
                                                     12,
+                                                width: MediaQuery.of(context)
+                                                        .size
+                                                        .width /
+                                                    6,
+                                                decoration: BoxDecoration(
+                                                    image: DecorationImage(
+                                                        image: AssetImage(
+                                                            "assets/ic-attendance-list.png"),
+                                                        fit: BoxFit.contain)),
                                               ),
                                               Text(
                                                 "Attendance List",
@@ -172,12 +196,21 @@ class Home extends StatelessWidget {
                                           onTap: () {},
                                           child: Column(
                                             children: <Widget>[
-                                              Image.asset(
-                                                "assets/ic-r3-form.png",
+                                              Container(
+                                                alignment: Alignment.center,
                                                 height: MediaQuery.of(context)
                                                         .size
                                                         .height /
                                                     12,
+                                                width: MediaQuery.of(context)
+                                                        .size
+                                                        .width /
+                                                    6,
+                                                decoration: BoxDecoration(
+                                                    image: DecorationImage(
+                                                        image: AssetImage(
+                                                            "assets/ic-r3-form.png"),
+                                                        fit: BoxFit.contain)),
                                               ),
                                               Text(
                                                 "R3FORMS",

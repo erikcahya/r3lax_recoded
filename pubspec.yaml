@@ -65,6 +65,8 @@ flutter:
     - assets/img-id-card.png
     - assets/qrcode.png
     - assets/ic-edit-family.png
+    - assets/img-no-record-yet.png
+    - assets/ic-personel-health.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

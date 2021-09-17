@@ -6,9 +6,10 @@ import 'package:r3lax_stable/home.dart';
 double ukuran_font = 14;
 IconData icon_health_form = Icons.add;
 String textalert_health = "Wajib Diisi";
-int val = -1;
 
 bool _value = false;
+var val1 = -1;
+var val = -1;
 
 class Health_form extends StatefulWidget {
   @override
@@ -130,13 +131,15 @@ class _Health_formState extends State<Health_form> {
                                         "Tidak Ada",
                                       ),
                                       listview_health_form(
-                                          "Apakah ada yang sedang melakukan isolasi mandiri?",
-                                          "Ada",
-                                          "Tidak Ada"),
+                                        "Apakah ada yang sedang melakukan isolasi mandiri?",
+                                        "Ada",
+                                        "Tidak Ada",
+                                      ),
                                       listview_health_form(
-                                          "Apakah ada yang memiliki riwayat kontak erat dengan kasus konfirmasi positif dalama 3 hari terakhir?",
-                                          "Ada",
-                                          "Tidak Ada"),
+                                        "Apakah ada yang memiliki riwayat kontak erat dengan kasus konfirmasi positif dalama 3 hari terakhir?",
+                                        "Ada",
+                                        "Tidak Ada",
+                                      ),
                                     ],
                                   ),
                                 ),
@@ -176,10 +179,7 @@ class _Health_formState extends State<Health_form> {
   }
 
   Container listview_health_form(
-    String textjudul,
-    String fieldisi1,
-    String fieldisi2,
-  ) {
+      String textjudul, String fieldisi1, String fieldisi2) {
     return Container(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -193,13 +193,13 @@ class _Health_formState extends State<Health_form> {
             child: Row(children: <Widget>[
               Radio(
                 value: 1,
-                groupValue: val,
+                groupValue: val1,
                 onChanged: (value) {
                   setState(() {
-                    val = value;
+                    val1 = value;
                   });
                 },
-                activeColor: Colors.green,
+                activeColor: Colors.blue,
                 toggleable: true,
               ),
               Text(
@@ -218,7 +218,7 @@ class _Health_formState extends State<Health_form> {
                     val = value;
                   });
                 },
-                activeColor: Colors.green,
+                activeColor: Colors.blue,
                 toggleable: true,
               ),
               Text(
