@@ -1,6 +1,13 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:r3lax_stable/home.dart';
 import 'package:r3lax_stable/login.dart';
+import 'package:qr_flutter/qr_flutter.dart';
+
+String qrprofiles = "Profile-Erick.suhanda";
+var bytes = utf8.encode(qrprofile);
+String qrprofile = base64Encode(bytes);
 
 class Profile extends StatelessWidget {
   @override
@@ -126,17 +133,12 @@ class Profile extends StatelessWidget {
                                     )),
                                 Flexible(
                                     flex: 4,
-                                    child: Container(
-                                      height:
-                                          MediaQuery.of(context).size.height,
-                                      width: MediaQuery.of(context).size.width /
-                                          2.8,
-                                      decoration: BoxDecoration(
-                                        image: DecorationImage(
-                                            fit: BoxFit.fill,
-                                            image: AssetImage(
-                                                "assets/qrcode.png")),
-                                      ),
+                                    child: QrImage(
+                                      padding: EdgeInsets.all(10),
+                                      data: "UHJvZmlsZS1Fcmljay5zdWhhbmRh",
+                                      version: 6,
+                                      errorCorrectionLevel:
+                                          QrErrorCorrectLevel.Q,
                                     )),
                               ],
                             )),

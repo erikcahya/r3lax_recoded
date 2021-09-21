@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:carousel_slider/carousel_slider.dart';
-import 'package:r3lax_stable/health_form.dart';
+import 'package:r3lax_stable/healthForm.dart';
 import 'package:r3lax_stable/profile.dart';
 
 class Home extends StatelessWidget {
@@ -25,7 +25,7 @@ class Home extends StatelessWidget {
                         decoration: BoxDecoration(
                             image: DecorationImage(
                                 image: AssetImage("assets/img-cover.png"),
-                                fit: BoxFit.cover)),
+                                fit: BoxFit.fill)),
                       ),
                       Positioned(
                         top: MediaQuery.of(context).size.height * 0.04,
@@ -122,11 +122,11 @@ class Home extends StatelessWidget {
                                                     context,
                                                     MaterialPageRoute(
                                                         builder: (context) =>
-                                                            Health_form()));
+                                                            HealthForm()));
                                               },
                                               child: Column(
                                                 crossAxisAlignment:
-                                                    CrossAxisAlignment.start,
+                                                    CrossAxisAlignment.center,
                                                 children: <Widget>[
                                                   Container(
                                                     alignment: Alignment.center,
@@ -163,7 +163,7 @@ class Home extends StatelessWidget {
                                           onTap: () {},
                                           child: Column(
                                             crossAxisAlignment:
-                                                CrossAxisAlignment.start,
+                                                CrossAxisAlignment.center,
                                             children: <Widget>[
                                               Container(
                                                 alignment: Alignment.center,
@@ -195,6 +195,8 @@ class Home extends StatelessWidget {
                                         child: InkWell(
                                           onTap: () {},
                                           child: Column(
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.center,
                                             children: <Widget>[
                                               Container(
                                                 alignment: Alignment.center,
@@ -208,6 +210,8 @@ class Home extends StatelessWidget {
                                                     6,
                                                 decoration: BoxDecoration(
                                                     image: DecorationImage(
+                                                        alignment:
+                                                            Alignment.center,
                                                         image: AssetImage(
                                                             "assets/ic-r3-form.png"),
                                                         fit: BoxFit.contain)),

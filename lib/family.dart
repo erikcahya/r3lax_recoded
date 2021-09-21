@@ -70,9 +70,10 @@ class _FamilyState extends State<Family> {
                       ),
                       Positioned(
                           top: MediaQuery.of(context).size.height / 18,
-                          bottom: 0,
                           right: 16,
                           left: 16,
+                          bottom: 0,
+                          height: MediaQuery.of(context).size.height,
                           child: Container(
                             child: Column(
                               children: [

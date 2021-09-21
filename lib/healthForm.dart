@@ -3,20 +3,19 @@ import 'package:flutter/painting.dart';
 import 'package:r3lax_stable/family.dart';
 import 'package:r3lax_stable/home.dart';
 
-double ukuran_font = 14;
-IconData icon_health_form = Icons.add;
-String textalert_health = "Wajib Diisi";
+double ukuranFont = 14;
+IconData iconHealthForm = Icons.add;
+String textalertHealth = "Wajib Diisi";
 
-bool _value = false;
 var val1 = -1;
 var val = -1;
 
-class Health_form extends StatefulWidget {
+class HealthForm extends StatefulWidget {
   @override
-  _Health_formState createState() => _Health_formState();
+  _HealthFormState createState() => _HealthFormState();
 }
 
-class _Health_formState extends State<Health_form> {
+class _HealthFormState extends State<HealthForm> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -54,10 +53,11 @@ class _Health_formState extends State<Health_form> {
                           height: MediaQuery.of(context).size.width * 0.09,
                           width: MediaQuery.of(context).size.width * 0.16,
                           child: IconButton(
+                              iconSize: MediaQuery.of(context).size.height,
                               icon: ImageIcon(
                                 AssetImage("assets/ic-edit-family.png"),
                                 color: Colors.white,
-                                size: 100,
+                                size: MediaQuery.of(context).size.height,
                               ),
                               onPressed: () {
                                 Navigator.push(
@@ -125,17 +125,17 @@ class _Health_formState extends State<Health_form> {
                                   margin: EdgeInsets.only(top: 21),
                                   child: ListView(
                                     children: <Widget>[
-                                      listview_health_form(
+                                      listviewHealthForm(
                                         "Apakah hari ini anda atau orang serumah ada yang tidak sehat?",
                                         "Ada",
                                         "Tidak Ada",
                                       ),
-                                      listview_health_form(
+                                      listviewHealthForm(
                                         "Apakah ada yang sedang melakukan isolasi mandiri?",
                                         "Ada",
                                         "Tidak Ada",
                                       ),
-                                      listview_health_form(
+                                      listviewHealthForm(
                                         "Apakah ada yang memiliki riwayat kontak erat dengan kasus konfirmasi positif dalama 3 hari terakhir?",
                                         "Ada",
                                         "Tidak Ada",
@@ -158,8 +158,8 @@ class _Health_formState extends State<Health_form> {
                                         children: [
                                           Text(
                                             "Next",
-                                            style: TextStyle(
-                                                fontSize: ukuran_font),
+                                            style:
+                                                TextStyle(fontSize: ukuranFont),
                                           ),
                                           Icon(Icons.arrow_forward)
                                         ],
@@ -178,7 +178,7 @@ class _Health_formState extends State<Health_form> {
     );
   }
 
-  Container listview_health_form(
+  Container listviewHealthForm(
       String textjudul, String fieldisi1, String fieldisi2) {
     return Container(
       child: Column(
@@ -187,7 +187,7 @@ class _Health_formState extends State<Health_form> {
         children: <Widget>[
           Text(
             textjudul,
-            style: TextStyle(fontSize: ukuran_font),
+            style: TextStyle(fontSize: ukuranFont),
           ),
           Container(
             child: Row(children: <Widget>[
@@ -204,7 +204,7 @@ class _Health_formState extends State<Health_form> {
               ),
               Text(
                 fieldisi1,
-                style: TextStyle(fontSize: ukuran_font),
+                style: TextStyle(fontSize: ukuranFont),
               ),
             ]),
           ),
@@ -223,13 +223,13 @@ class _Health_formState extends State<Health_form> {
               ),
               Text(
                 fieldisi2,
-                style: TextStyle(fontSize: ukuran_font),
+                style: TextStyle(fontSize: ukuranFont),
               )
             ]),
           ),
           Container(
               child: Text(
-            textalert_health,
+            textalertHealth,
             style: TextStyle(fontSize: 10, color: Colors.red),
           )),
         ],
